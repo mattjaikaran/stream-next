@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { homeData } from '@/lib/home-data';
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-16">
@@ -37,9 +38,18 @@ export default function Home() {
       </Carousel>
       <HeadingH5 className="mt-4">Cool Featured Content</HeadingH5>
       <div className="grid lg:grid-cols-3 gap-4">
-        <VideoCard title="here is some text" />
-        <VideoCard title="here is some text" />
-        <VideoCard title="here is some text" />
+        <VideoCard
+          title="here is some text"
+          tags={['sports', 'nba', 'miami heat', 'lebron james']}
+        />
+        <VideoCard
+          title="here is some text"
+          tags={['sports', 'nfl', 'miami dolphins', 'dan marino']}
+        />
+        <VideoCard
+          title="here is some text"
+          tags={['news', 'politics', 'labor', 'unions']}
+        />
       </div>
 
       <HeadingH5 className="mt-4">Featured Videos</HeadingH5>
@@ -50,11 +60,12 @@ export default function Home() {
             title={video.title}
             // @ts-ignore
             views={parseFloat(video.views)}
+            tags={video.tags}
           />
         ))}
       </div>
 
-      <HeadingH5 className="mt-4">Live Streams</HeadingH5>
+      <HeadingH5 className="mt-4">Trending Videos</HeadingH5>
 
       <Carousel>
         <CarouselContent>

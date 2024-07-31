@@ -4,15 +4,17 @@ export interface HomeData {
   description: string;
   url: string;
   views: number;
+  tags?: string[];
 }
 
 export const homeData = [
   {
-    title: 'here is some text',
+    title: 'here is some text1',
     thumbnail: 'https://dummyimage.com/400x300/000/fff',
     description: 'here is some text',
     url: 'https://dummyimage.com/400x300/000/fff',
     views: 100,
+    tags: ['sup', 'dude'],
   },
   {
     title: 'here is some text',
@@ -20,6 +22,7 @@ export const homeData = [
     description: 'here is some text',
     url: 'https://dummyimage.com/400x300/000/fff',
     views: 2592,
+    tags: ['get', 'fucked'],
   },
   {
     title: 'here is some text',
@@ -27,6 +30,7 @@ export const homeData = [
     description: 'here is some text',
     url: 'https://dummyimage.com/400x300/000/fff',
     views: 2934520,
+    tags: ['sports', 'nfl', 'packers'],
   },
   {
     title: 'carousel text1',
@@ -34,6 +38,7 @@ export const homeData = [
     description: 'carousel text1',
     url: 'https://dummyimage.com/400x300/000/fff',
     views: 23,
+    tags: ['sports', 'nba', 'miami heat', 'lebron james'],
   },
   {
     title: 'carousel text1',

@@ -58,10 +58,17 @@ export default function Navbar({
               </div>
             ))} */}
             <DropdownMenuGroup>
-              <DropdownMenuLabel>Dashboard</DropdownMenuLabel>
+              <DropdownMenuLabel>
+                <Link href="/login">Login</Link>
+              </DropdownMenuLabel>
+              <DropdownMenuLabel>
+                <Link href="/dashboard">Dashboard</Link>
+              </DropdownMenuLabel>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link href="/dashboard/settings">Settings</Link>
+              </DropdownMenuItem>
               <DropdownMenuItem>Logout</DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>

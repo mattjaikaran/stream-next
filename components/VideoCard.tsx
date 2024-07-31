@@ -4,14 +4,17 @@ import { HeadingH5 } from './typography';
 import { Badge } from './ui/badge';
 import { Card, CardHeader, CardContent } from './ui/card';
 import Image from 'next/image';
+
 const VideoCard = ({
   title,
   thumbnail,
   views,
+  tags,
 }: {
   title: string;
   thumbnail?: string;
   views?: string;
+  tags?: string[];
 }) => {
   return (
     <Card>
@@ -29,7 +32,11 @@ const VideoCard = ({
         <p>by Some User</p>
         <p>{views ?? 0} views</p>
         <div className="mt-2">
-          <Badge variant="default">Tag</Badge>
+          {tags?.map((tag, index) => (
+            <Badge key={index} variant="default" className="mr-1">
+              {tag}
+            </Badge>
+          ))}
         </div>
       </CardContent>
     </Card>

@@ -1,7 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 export default function DashboardLayout({
   children,
 }: {
@@ -16,10 +22,19 @@ export default function DashboardLayout({
               <Package2Icon className="h-6 w-6" />
               <span className="">User</span>
             </Link>
-            <Button className="ml-auto h-8 w-8" size="icon" variant="outline">
-              <BellIcon className="h-4 w-4" />
-              <span className="sr-only">Toggle notifications</span>
-            </Button>
+            <div className="ml-auto">
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <BellIcon className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuGroup>
+                    <DropdownMenuLabel>Notification 1</DropdownMenuLabel>
+                    <DropdownMenuLabel>Notification 2</DropdownMenuLabel>
+                  </DropdownMenuGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
           <nav className="grid items-start px-4 text-sm font-medium">
             <Link
@@ -27,21 +42,21 @@ export default function DashboardLayout({
               href="#"
             >
               <HomeIcon className="h-4 w-4" />
-              Home
+              Dashboard
             </Link>
             <Link
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               href="#"
             >
               <PackageIcon className="h-4 w-4" />
-              Products
+              My Videos
             </Link>
             <Link
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               href="#"
             >
               <UsersIcon className="h-4 w-4" />
-              Customers
+              My Playlists
             </Link>
             <Link
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
@@ -97,7 +112,7 @@ export default function DashboardLayout({
               alt="Avatar"
               className="rounded-full"
               height="32"
-              src="/placeholder.svg"
+              src="https://dummyimage.com/32x32/fff/000"
               style={{
                 aspectRatio: '32/32',
                 objectFit: 'cover',
