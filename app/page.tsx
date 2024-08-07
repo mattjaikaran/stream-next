@@ -40,14 +40,17 @@ export default function Home() {
       <div className="grid lg:grid-cols-3 gap-4">
         <VideoCard
           title="here is some text"
+          views="999"
           tags={['sports', 'nba', 'miami heat', 'lebron james']}
         />
         <VideoCard
           title="here is some text"
+          views="2349578"
           tags={['sports', 'nfl', 'miami dolphins', 'dan marino']}
         />
         <VideoCard
           title="here is some text"
+          views="230582820"
           tags={['news', 'politics', 'labor', 'unions']}
         />
       </div>
@@ -71,10 +74,10 @@ export default function Home() {
         <CarouselContent>
           <CarouselItem>
             <div className="grid lg:grid-cols-4 gap-4">
-              <VideoCard title="carousel text1" />
-              <VideoCard title="carousel text1" />
-              <VideoCard title="carousel text1" />
-              <VideoCard title="carousel text1" />
+              <VideoCard title="carousel text1" views="1" />
+              <VideoCard title="carousel text2" views="2" />
+              <VideoCard title="carousel text3" views="3" />
+              <VideoCard title="carousel text4" views="4" />
             </div>
           </CarouselItem>
           <CarouselItem>

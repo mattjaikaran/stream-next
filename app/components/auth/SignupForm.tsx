@@ -6,7 +6,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useSignupMutation } from '@/lib/store/authApi';
 
 const signupSchema = z.object({
   username: z.string().min(3, 'Username must be at least 3 characters'),
@@ -17,7 +16,6 @@ const signupSchema = z.object({
 type SignupFormData = z.infer<typeof signupSchema>;
 
 export function SignupForm() {
-  const [signup, { isLoading }] = useSignupMutation();
   const [error, setError] = useState<string | null>(null);
 
   const {
@@ -30,7 +28,7 @@ export function SignupForm() {
 
   const onSubmit = async (data: SignupFormData) => {
     try {
-      await signup(data).unwrap();
+      console.log('🚀 ~ onSubmit ~ data:', data);
       // Handle successful signup (e.g., redirect to login page)
     } catch (err) {
       setError('Signup failed. Please try again.');
@@ -50,9 +48,9 @@ export function SignupForm() {
 
       {error && <p>{error}</p>}
 
-      <Button type="submit" disabled={isLoading}>
+      {/* <Button type="submit" disabled={isLoading}>
         {isLoading ? 'Signing up...' : 'Sign up'}
-      </Button>
+      </Button> */}
     </form>
   );
 }

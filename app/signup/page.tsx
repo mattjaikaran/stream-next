@@ -2,9 +2,9 @@ import { SignupForm } from '../components/auth/SignupForm';
 
 export default function SignupPage() {
   return (
-    <div>
+    <main className="flex flex-col justify-between p-16">
       <h1>Sign up</h1>
       <SignupForm />
-    </div>
+    </main>
   );
 }

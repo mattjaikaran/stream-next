@@ -6,7 +6,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useLoginMutation } from '@/lib/store/authApi';
 
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -16,7 +15,6 @@ const loginSchema = z.object({
 type LoginFormData = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
-  const [login, { isLoading }] = useLoginMutation();
   const [error, setError] = useState<string | null>(null);
 
   const {
@@ -29,9 +27,9 @@ export function LoginForm() {
 
   const onSubmit = async (data: LoginFormData) => {
     try {
-      const result = await login(data).unwrap();
+      console.log('🚀 ~ onSubmit ~ data:', data);
       // Handle successful login (e.g., save token to localStorage and redirect)
-      localStorage.setItem('token', result.token);
+      // localStorage.setItem('token', result.token);
       // Redirect to dashboard or home page
     } catch (err) {
       setError('Login failed. Please check your credentials.');
@@ -48,9 +46,9 @@ export function LoginForm() {
 
       {error && <p>{error}</p>}
 
-      <Button type="submit" disabled={isLoading}>
+      {/* <Button type="submit" disabled={isLoading}>
         {isLoading ? 'Logging in...' : 'Log in'}
-      </Button>
+      </Button> */}
     </form>
   );
 }

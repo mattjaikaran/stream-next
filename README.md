@@ -1,16 +1,19 @@
-# Stream front end NextJS
+# Stream NextJS
+
+Video streaming front end built with NextJS 14 using App Router and React Query
 
 ## Technologies
 
 - React 18
-- Next 14 App Router
+- [Next 14](https://nextjs.org/docs) App Router
+    - Using [React Server Components](https://react.dev/reference/rsc/server-components)
 - TypeScript
-- [Redux Toolkit](https://redux-toolkit.js.org/)
-- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [React Hook Form](https://react-hook-form.com/)
+- [Tanstack Query/React Query](https://tanstack.com/query/latest/docs/framework/react/overview) 
+- [shadcn/ui](https://ui.shadcn.com)
+- [React Hook Form](https://react-hook-form.com)
 - [Zod](https://zod.dev) Form Validation
-- Bun
+- [Bun](https://bun.sh)
+
 
 
 ## Getting Started
