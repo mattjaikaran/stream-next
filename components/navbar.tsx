@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils/tailwind';
 import { siteConfig } from '@/config/site';
 import { buttonVariants } from './ui/button';
 import { Icons } from './icons';

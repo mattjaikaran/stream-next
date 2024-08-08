@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Streaming Platform - Next',
+  name: 'Stream Next',
   description: 'Video Streaming App Description',
   mainNav: [
     {

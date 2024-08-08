@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils/tailwind';
 import Link from 'next/link';
 
 // i want to create a sidebar for the dashboard Layout. it should contain the following links:

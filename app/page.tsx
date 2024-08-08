@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { homeData } from '@/lib/home-data';
+import { homeData } from '@/lib/data/home-data';
 
 export default function Home() {
   return (

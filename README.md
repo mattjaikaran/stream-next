@@ -4,7 +4,7 @@ Video streaming front end built with NextJS 14 using App Router and React Query
 
 ## Technologies
 
-- React 18
+- [React 18](https://react.dev/learn)
 - [Next 14](https://nextjs.org/docs) App Router
     - Using [React Server Components](https://react.dev/reference/rsc/server-components)
 - TypeScript
